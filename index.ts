@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 
 let retry:boolean=true
@@ -7,14 +9,14 @@ const userInput=await inquirer.prompt(
     {
         type:"input",
         name:"userinput",
-        message:"Enter your sentence to count latters and words ?"
+        message:"Enter your sentence to count letters and words ?"
     },
 )
 let {userinput}=userInput
 
 const input=userinput.replace(/\s/g,"")
 const user:number=input.length
-console.log("Latters : "+ user);
+console.log("Letters : "+ user);
 
 const words=userinput.split(" ").length
 console.log("Words : "+words);
